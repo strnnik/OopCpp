@@ -6,11 +6,12 @@
 #include <vector>
 
 class Employee {
-    static int id;
+    static int nextId;
+    int id;
     std::string firstName;
     std::string lastName;
     std::string position;
-    int salary;
+    double salary;
 public:
     void outputInfoEmployee();
 };

@@ -1,15 +1,19 @@
 #include "Developer.h"
 
-Developer::Developer(std::string _firstFame, std::string _lastName, std::string _programmingLanguage){
+Developer::Developer(std::string _firstFame, std::string _lastName, double _salary, std::string _programmingLanguage){
+    id = nextId++;
     fistName = _firstName;
     lastName = _lastName;
+    salary = _salary;
     programmingLanguage = _programmingLanguage;
     project = nullptr;
 }
 
-Developer::Developer(std::string _firstFame, std::string _lastName, std::string _programmingLanguage, Project *_project){
+Developer::Developer(std::string _firstFame, std::string _lastName, double _salary, std::string _programmingLanguage, Project *_project){
+    id = nextId++;
     fistName = _firstName;
     lastName = _lastName;
+    salary = _salary;
     programmingLanguage = _programmingLanguage;
     project = nullptr;
 }
