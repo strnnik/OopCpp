@@ -1,7 +1,8 @@
 #include "Project.h"
+#include "Developer.h"
 
 namespace {
-    Date parseDate(string dateStr){
+    Date parseDate(std::string dateStr){
         Date date;
         date.day = std::stoi(dateStr.substr(0, 2));
         date.month = std::stoi(dateStr.substr(3, 2));
@@ -11,21 +12,24 @@ namespace {
     }
 }
 
-Project::Project(){
-    nameProject = "";
-    deadline = Date();
+Project::Project() : 
+    nameProject(""), 
+    deadline(Date()) {}
+
+Project::Project(std::string _nameProject, std::string _deadline) :
+    nameProject(_nameProject), 
+    deadline(parseDate(_deadline)) {}
+
+Project::Project(std::string _nameProject, std::string _deadline, std::vector<Developer*> _developers) :
+    nameProject(_nameProject),
+    deadline(parseDate(_deadline)),
+    developers(_developers) {}
+
+Project::~Project(){
+    
 }
 
-Project::Project(string _nameProject, std::string _deadline){
-    nameProject = _nameProject;
-    deadline = _deadline
-}
-
-Project::Project(std::string _nameProject, std::string _deadline, std::vector<*Developer> _developers){
-
-}
-
-void Project::addDeveloper(Developer &dev){
+void Project::addDeveloper(Developer *dev){
     developers.push_back(dev);
 }
 

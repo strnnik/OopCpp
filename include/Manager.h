@@ -2,19 +2,27 @@
 
 #include "Employee.h"
 
-struct Candidates {
+enum class TypeManager{ 
+    HRManager, 
+    ProductManager, 
+    ProjectManager 
+};
+
+struct Candidate {
     static int nextId;
     int id;
     std::string firstName;
     std::string lastName;
     std::string email;
     std::string dateInterview;
+    Candidate(std::string firstName, std::string lastName, std::string email, std::string dateInterview);
 };
 
 class Manager : public Employee {
-    std::vector<Candidates*> listCandidates;
+    TypeManager typeManager; 
+    std::vector<Candidate*> listCandidates;
 public:
-    Manager(std::string _firstFame, std::string _lastName, double _salary);
-    Manager(std::string _firstFame, std::string _lastName, double _salary, std::vector<Candidates*> _listCandidates);
+    Manager(TypeManager);
+    Manager::~Manager();
     void addCandidate(std::string _firstName, std::string _lastName, std::string _email, std::string _dateInterview);
 };

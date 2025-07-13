@@ -24,6 +24,7 @@ public:
     Project();
     Project(std::string _nameProject, std::string _deadline);
     Project(std::string _nameProject, std::string _deadline, std::vector<Developer*> _developers);
-    void addDeveloper(Developer&);
+    ~Project();
+    void addDeveloper(Developer*);
     void outputInfo();
 };

@@ -1,5 +1,6 @@
 #include "Developer.h"
 #include "Project.h"
+#include "Manager.h"
 
 #include <iostream>
 

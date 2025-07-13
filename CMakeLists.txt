@@ -1,22 +1,24 @@
 cmake_minimum_required(VERSION 3.5)
-project(oop1)
-
-set(SOURCES
-        Employee.cpp,
-        Developer.cpp,
-        Project.cpp,
-        main.cpp
-)
+project(OopCpp)
 
 set(HEADERS
-        Employee.h,
-        Developer.h,
-        Project.h
+        include/Employee.h,
+        include/Developer.h,
+        include/Manager.h,
+        include/Project.h
 )
 
-add_executable(oop1 ${SOURCES} ${HEADERS})
+set(SOURCES
+        src/Employee.cpp,
+        src/Developer.cpp,
+        src/Manager.cpp,
+        src/Project.cpp,
+        src/main.cpp
+)
 
-set_target_properties(oop1 PROPERTIES
+add_executable(OopCpp ${HEADERS} ${SOURCES})
+
+set_target_properties(OopCpp PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
 )
