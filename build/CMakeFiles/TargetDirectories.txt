@@ -1,3 +1,3 @@
-/home/ubuntu/cppprojects/OopCpp/build/CMakeFiles/oopcpp.dir
+/home/ubuntu/cppprojects/OopCpp/build/CMakeFiles/OopCpp.dir
 /home/ubuntu/cppprojects/OopCpp/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/cppprojects/OopCpp/build/CMakeFiles/rebuild_cache.dir

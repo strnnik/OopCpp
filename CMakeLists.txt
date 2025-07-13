@@ -1,24 +1,17 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(OopCpp)
 
-set(HEADERS
-        include/Employee.h,
-        include/Developer.h,
-        include/Manager.h,
-        include/Project.h
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(OopCpp
+    src/main.cpp
+    src/Employee.cpp
+    src/Manager.cpp
+    src/Developer.cpp
+    src/Project.cpp
 )
 
-set(SOURCES
-        src/Employee.cpp,
-        src/Developer.cpp,
-        src/Manager.cpp,
-        src/Project.cpp,
-        src/main.cpp
-)
-
-add_executable(OopCpp ${HEADERS} ${SOURCES})
-
-set_target_properties(OopCpp PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED ON
+target_include_directories(OopCpp PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
 )

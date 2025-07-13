@@ -9,11 +9,7 @@ class Developer;
 struct Date {
     int day, month, year;
 
-    Date() {
-        day = 0;
-        month = 0;
-        year = 0;
-    }
+    Date() {}
 };
 
 class Project {
@@ -21,10 +17,13 @@ class Project {
     Date deadline;
     std::vector<Developer*> developers;
 public:
-    Project();
     Project(std::string _nameProject, std::string _deadline);
     Project(std::string _nameProject, std::string _deadline, std::vector<Developer*> _developers);
     ~Project();
+    void setNameProject(std::string _nameProject);
+    void setDeadline(std::string _deadline);
+    std::string getNameProject();
+    std::string getDeadlineProject();
     void addDeveloper(Developer*);
     void outputInfo();
 };

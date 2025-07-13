@@ -15,9 +15,9 @@ public:
     Employee(std::string _firstName, std::string _lastName, double _salary);
     void setFirstName(std::string _firstName);
     void setLastName(std::string _lastName);
+    void setSalary(double _salary);
     std::string getFirstName();
     std::string getLastName();
     double getSalary();
-    void editSalary(double _salary);
     virtual void outputInfoEmployee();
 };

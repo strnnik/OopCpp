@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Employee.h"
+#include "../include/Employee.h"
 
 enum class TypeManager{ 
     HRManager, 
@@ -22,7 +22,9 @@ class Manager : public Employee {
     TypeManager typeManager; 
     std::vector<Candidate*> listCandidates;
 public:
-    Manager(TypeManager);
-    Manager::~Manager();
+    Manager(std::string _firstName, std::string _lastName, double _salary, TypeManager);
+    ~Manager();
+    std::string getTypeManager();
     void addCandidate(std::string _firstName, std::string _lastName, std::string _email, std::string _dateInterview);
+    void outputInfoEmployee();
 };

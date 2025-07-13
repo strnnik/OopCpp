@@ -1,13 +1,13 @@
-#include "Employee.h"
+#include "../include/Employee.h"
 
 int Employee::nextId = 0;
 
 Employee::Employee(std::string _firstName, std::string _lastName, double _salary) : 
-firstName(_firstName), 
-lastName(_lastName), 
-salary(_salary) {
-    id = nextId++;
-}
+    firstName(_firstName), 
+    lastName(_lastName), 
+    salary(_salary) {
+        id = nextId++;
+    }
 
 void Employee::setFirstName(std::string _firstName){
     firstName = firstName;
@@ -16,7 +16,7 @@ void Employee::setLastName(std::string _lastName){
     lastName = _lastName;
 }
 
-void Employee::editSalary(double _salary){
+void Employee::setSalary(double _salary){
     salary = _salary;
 }
 

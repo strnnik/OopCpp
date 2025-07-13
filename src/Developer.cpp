@@ -1,22 +1,24 @@
-#include "Developer.h"
+#include "../include/Developer.h"
 
-Developer::Developer(std::string _programmingLanguage) :
-    Employee(firstName, lastName, salary), 
+Developer::Developer(std::string _firstName, std::string _lastName, double _salary, std::string _programmingLanguage) :
+    Employee(_firstName, _lastName, _salary), 
     programmingLanguage(_programmingLanguage) {
         project = nullptr;
     }
 
-Developer::Developer(std::string _programmingLanguage, Project *_project) :
-    Employee(firstName, lastName, salary), 
+Developer::Developer(std::string _firstName, std::string _lastName, double _salary, std::string _programmingLanguage, Project *_project) :
+    Employee(_firstName, _lastName, _salary), 
     programmingLanguage(_programmingLanguage),
-    project(_project) {}
+    project(_project) {
+        _project->addDeveloper(this);
+    }
 
-std::string Developer::getFirstName(){
-    return firstName;
+void Developer::setProgLang(std::string _lang){
+    programmingLanguage = _lang;
 }
 
-std::string Developer::getLastName(){
-    return lastName;
+void Developer::setProject(Project *_project){
+    project = _project;
 }
 
 std::string Developer::getProgLang(){
@@ -33,6 +35,10 @@ void Developer::getInfoProject(){
 
 void Developer::outputInfoEmployee() {
     Employee::outputInfoEmployee();
-    std::cout << getProgLang() << std::endl;
-    getInfoProject();
+    std::cout << "Programming language: " << getProgLang() << std::endl;
+    if (project == nullptr){
+        std::cout << "The developer is not currently involved in the project.\n";
+    } else {
+        std::cout << project->getNameProject() << std::endl;
+    }
 };

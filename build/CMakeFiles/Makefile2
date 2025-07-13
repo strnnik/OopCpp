@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/cppprojects/OopCpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/oopcpp.dir/all
+all: CMakeFiles/OopCpp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/oopcpp.dir/clean
+clean: CMakeFiles/OopCpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/oopcpp.dir
+# Target rules for target CMakeFiles/OopCpp.dir
 
 # All Build rule for target.
-CMakeFiles/oopcpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oopcpp.dir/build.make CMakeFiles/oopcpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oopcpp.dir/build.make CMakeFiles/oopcpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/cppprojects/OopCpp/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target oopcpp"
-.PHONY : CMakeFiles/oopcpp.dir/all
+CMakeFiles/OopCpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OopCpp.dir/build.make CMakeFiles/OopCpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OopCpp.dir/build.make CMakeFiles/OopCpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/cppprojects/OopCpp/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OopCpp"
+.PHONY : CMakeFiles/OopCpp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/oopcpp.dir/rule: cmake_check_build_system
+CMakeFiles/OopCpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/cppprojects/OopCpp/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/oopcpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OopCpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/cppprojects/OopCpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/oopcpp.dir/rule
+.PHONY : CMakeFiles/OopCpp.dir/rule
 
 # Convenience name for target.
-oopcpp: CMakeFiles/oopcpp.dir/rule
-.PHONY : oopcpp
+OopCpp: CMakeFiles/OopCpp.dir/rule
+.PHONY : OopCpp
 
 # clean rule for target.
-CMakeFiles/oopcpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/oopcpp.dir/build.make CMakeFiles/oopcpp.dir/clean
-.PHONY : CMakeFiles/oopcpp.dir/clean
+CMakeFiles/OopCpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OopCpp.dir/build.make CMakeFiles/OopCpp.dir/clean
+.PHONY : CMakeFiles/OopCpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

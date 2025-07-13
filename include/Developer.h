@@ -1,19 +1,17 @@
 #pragma once
 
-#include "Employee.h"
-#include "Project.h"
+#include "../include/Employee.h"
+#include "../include/Project.h"
 
 class Developer : public Employee {
     std::string programmingLanguage;
     Project *project;
 public:
-    Developer(std::string _programmingLanguage);
-    Developer(std::string _programmingLanguage, Project *_project);
-    std::string getFirstName();
-    std::string getLastName();
-    std::string getProgLang();
+    Developer(std::string _firstName, std::string _lastName, double _salary, std::string _programmingLanguage);
+    Developer(std::string _firstName, std::string _lastName, double _salary, std::string _programmingLanguage, Project *_project);
+    void setProgLang(std::string _lang);
+    void setProject(Project *_project);
     void getInfoProject();
-    void outputInfoEmployee() override {
-        Employee::outputInfoEmployee();
-    }
+    std::string getProgLang();
+    void outputInfoEmployee() override;
 };
