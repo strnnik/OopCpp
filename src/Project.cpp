@@ -50,8 +50,8 @@ void Project::outputInfo(){
     std::cout << "Name project: " << nameProject << std::endl;
     std::cout << "Project developers: \n";
 
-    for (int i = 0; i < developers.size(); i++) {
-        std::cout << developers[i]->getLastName() << std::endl;
+    for (auto dev : developers) {
+        std::cout << dev->getLastName() << std::endl;
     }
 
     std::cout << std::endl;

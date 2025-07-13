@@ -3,9 +3,9 @@
 #include "../include/Employee.h"
 
 enum class TypeManager{ 
-    HRManager, 
-    ProductManager, 
-    ProjectManager 
+    HR, 
+    Product, 
+    Project 
 };
 
 struct Candidate {
@@ -16,6 +16,7 @@ struct Candidate {
     std::string email;
     std::string dateInterview;
     Candidate(std::string firstName, std::string lastName, std::string email, std::string dateInterview);
+    void getInfo();
 };
 
 class Manager : public Employee {
@@ -26,5 +27,6 @@ public:
     ~Manager();
     std::string getTypeManager();
     void addCandidate(std::string _firstName, std::string _lastName, std::string _email, std::string _dateInterview);
+    void getInfoAboutCandidates();
     void outputInfoEmployee();
 };

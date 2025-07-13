@@ -9,15 +9,18 @@ int main() {
     
     Employee *emp[20];
 
-    emp[0] = new Manager("man1", "asd", 4000, TypeManager::ProductManager);
-    emp[1] = new Manager("man2", "asd", 3000, TypeManager::ProjectManager);
-    emp[2] = new Manager("man3", "asd", 1000, TypeManager::HRManager);
-    emp[3] = new Manager("man4", "asd", 9000, TypeManager::HRManager);
+    emp[0] = new Manager("man1", "asd", 4000, TypeManager::Product);
+    emp[1] = new Manager("man2", "asd", 3000, TypeManager::Project);
+    emp[2] = new Manager("man3", "asd", 1000, TypeManager::HR);
+    emp[3] = new Manager("man4", "asd", 9000, TypeManager::HR);
     
+    dynamic_cast<Manager*>(emp[1])->addCandidate("C1", "C11", "qwe@mail.ru", "10.10.2020");
+    dynamic_cast<Manager*>(emp[2])->getInfoAboutCandidates();
     dynamic_cast<Manager*>(emp[2])->addCandidate("C1", "C11", "qwe@mail.ru", "10.10.2020");
     dynamic_cast<Manager*>(emp[2])->addCandidate("C2", "C22", "qw@mail.ru", "05.03.2023");
     dynamic_cast<Manager*>(emp[2])->addCandidate("C3", "C33", "q@gmail.ru", "30.11.2021");
-    
+    dynamic_cast<Manager*>(emp[2])->getInfoAboutCandidates();
+
     Project *p[10];
     p[0] = new Project("Project1", "20.20.2020");
 
